@@ -1,4 +1,5 @@
 module.exports = function(eleventyConfig) {
+
   // Copy _statics while using `--serve`
   eleventyConfig.setServerPassthroughCopyBehavior("copy");
 
@@ -10,4 +11,5 @@ module.exports = function(eleventyConfig) {
 
   // Copy `static` to `_site/static`
   eleventyConfig.addPassthroughCopy("static/**/*");
+
 };
