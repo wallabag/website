@@ -3225,11 +3225,11 @@ input[type=button].btn-block {
 
 @font-face {
 	font-family: 'Glyphicons Halflings';
-	src: url(/static/fonts/glyphicons-halflings-regular.eot);
-	src: url(/static/fonts/glyphicons-halflings-regular.eot#iefix) format('embedded-opentype'), 
-    url(/static/fonts/glyphicons-halflings-regular.woff) format('woff'),
-    url(/static/fonts/glyphicons-halflings-regular.ttf) format('truetype'),
-    url(/static/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
+	src: url(/fonts/glyphicons-halflings-regular.eot);
+	src: url(/fonts/glyphicons-halflings-regular.eot#iefix) format('embedded-opentype'),
+    url(/fonts/glyphicons-halflings-regular.woff) format('woff'),
+    url(/fonts/glyphicons-halflings-regular.ttf) format('truetype'),
+    url(/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
 }
 
 .glyphicon {
@@ -7471,7 +7471,7 @@ button.close {
 .fancybox-close,
 .fancybox-prev span,
 .fancybox-next span {
-	background-image: url(/static/img/fancybox_sprite.png)
+	background-image: url(/img/fancybox_sprite.png)
 }
 
 #fancybox-loading {
@@ -7489,7 +7489,7 @@ button.close {
 #fancybox-loading div {
 	width: 44px;
 	height: 44px;
-	background: url(/static/img/fancybox_loading.gif) center center no-repeat
+	background: url(/img/fancybox_loading.gif) center center no-repeat
 }
 
 .fancybox-close {
@@ -7509,7 +7509,7 @@ button.close {
 	height: 100%;
 	cursor: pointer;
 	text-decoration: none;
-	background: transparent url(/static/css/blank.gif);
+	background: transparent url(/css/blank.gif);
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	z-index: 8040
 }
@@ -7577,7 +7577,7 @@ button.close {
 	overflow: hidden;
 	display: none;
 	z-index: 8000;
-	background: url(/static/img/fancybox_overlay.png)
+	background: url(/img/fancybox_overlay.png)
 }
 
 .fancybox-overlay-fixed {
@@ -7656,12 +7656,12 @@ only screen and (min-device-pixel-ratio:1.5) {
 	.fancybox-close,
 	.fancybox-prev span,
 	.fancybox-next span {
-		background-image: url(/static/img/fancybox_sprite@2x.png);
+		background-image: url(/img/fancybox_sprite@2x.png);
 		background-size: 44px 152px
 	}
 
 	#fancybox-loading div {
-		background-image: url(/static/img/fancybox_loading@2x.gif);
+		background-image: url(/img/fancybox_loading@2x.gif);
 		background-size: 24px 24px
 	}
 }
@@ -11106,37 +11106,37 @@ only screen and (min-device-pixel-ratio:1.5) {
 
 @font-face {
 	font-family: Nunito;
-	src: url(/static/fonts/Nunito-Regular.ttf)
+	src: url(/fonts/Nunito-Regular.ttf)
 }
 
 @font-face {
 	font-family: Nunito;
-	src: url(/static/fonts/Nunito-Bold.ttf);
+	src: url(/fonts/Nunito-Bold.ttf);
 	font-weight: 700
 }
 
 @font-face {
 	font-family: Nunito;
-	src: url(/static/fonts/Nunito-Italic.ttf);
+	src: url(/fonts/Nunito-Italic.ttf);
 	font-style: italic
 }
 
 @font-face {
 	font-family: Nunito;
-	src: url(/static/fonts/Nunito-BoldItalic.ttf);
+	src: url(/fonts/Nunito-BoldItalic.ttf);
 	font-weight: 700;
 	font-style: italic
 }
 
 @font-face {
 	font-family: Nunito;
-	src: url(/static/fonts/Nunito-Light.ttf);
+	src: url(/fonts/Nunito-Light.ttf);
 	font-weight: 300
 }
 
 @font-face {
 	font-family: Nunito;
-	src: url(/static/fonts/Nunito-LightItalic.ttf);
+	src: url(/fonts/Nunito-LightItalic.ttf);
 	font-style: italic;
 	font-weight: 300
 }
@@ -11475,7 +11475,7 @@ a:focus {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url(/static/img/grid.png)
+	background-image: url(/img/grid.png)
 }
 
 .use-btn {
@@ -11614,7 +11614,7 @@ a:focus {
 	position: relative;
 	padding: 10px 0 60px 0;
 	max-height: 800px;
-	background: rgb(40, 70, 102) url(/static/img/bg_header.jpg) no-repeat center center;
+	background: rgb(40, 70, 102) url(/img/bg_header.jpg) no-repeat center center;
 	background-size: cover;
 	color: #fff
 }
@@ -11703,7 +11703,7 @@ section.video a:focus i {
 .features-bg {
 	position: relative;
 	min-height: 400px;
-	background: url(/static/img/features-intro-01.jpg) no-repeat center center;
+	background: url(/img/features-intro-01.jpg) no-repeat center center;
 	background-size: cover
 }
 
@@ -11836,7 +11836,7 @@ blockquote .logo-quote {
 }
 
 .showcase {
-	background: url(/static/img/showcase-bg-fixed-01.jpg) no-repeat center center fixed;
+	background: url(/img/showcase-bg-fixed-01.jpg) no-repeat center center fixed;
 	background-size: cover
 }
 
@@ -11858,7 +11858,7 @@ blockquote .logo-quote {
 	left: 20%;
 	min-height: 676px;
 	width: 359px;
-	background: url(/static/img/iphone-skeleton.png) no-repeat center center
+	background: url(/img/iphone-skeleton.png) no-repeat center center
 }
 
 .device-content {
