@@ -1,4 +1,5 @@
 const { DateTime } = require('luxon');
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
 
@@ -8,13 +9,13 @@ module.exports = function(eleventyConfig) {
         .setZone('Europe/Paris')
         .setLocale(lang);
     }
-
     const formattedDate = (date, lang = 'en') => {
       return jsToDateTime(date, lang).toFormat('d LLLL y');
     }
     return value ? formattedDate(value) : "";
-
   });
+
+  eleventyConfig.addPlugin(pluginRss);
 
   // Copy _statics while using `--serve`
   eleventyConfig.setServerPassthroughCopyBehavior("copy");
