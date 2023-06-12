@@ -2,25 +2,25 @@ $(document).ready(function() {
 
   /***************** Waypoints ******************/
   $('.wp1').waypoint(function() {
-    $('.wp1').addClass('animated fadeInDown');
+    $('.wp1').addClass('animated fadeIn');
   }, {
     offset: '100%'
   });
 
   $('.wp2').waypoint(function() {
-    $('.wp2').addClass('animated fadeInDown');
+    $('.wp2').addClass('animated fadeIn');
   }, {
     offset: '90%'
   });
 
   $('.wp3').waypoint(function() {
-    $('.wp3').addClass('animated fadeInDown');
+    $('.wp3').addClass('animated fadeIn');
   }, {
     offset: '85%'
   });
 
   $('.wp4').waypoint(function() {
-    $('.wp4').addClass('animated fadeInDown');
+    $('.wp4').addClass('animated fadeIn');
   }, {
     offset: '85%'
   });
