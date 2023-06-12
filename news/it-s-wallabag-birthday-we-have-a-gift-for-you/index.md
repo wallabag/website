@@ -1,5 +1,6 @@
 ---
 title: 'It''s wallabag birthday, we have a gift for you!'
+date: 2014-04-04
 taxonomy:
     category:
         - blog
