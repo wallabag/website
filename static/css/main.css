@@ -4585,6 +4585,11 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 	margin-left: -1px
 }
 
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .nav {
 	margin-bottom: 0;
 	padding-left: 0;
@@ -11619,10 +11624,22 @@ a:focus {
 	color: #fff
 }
 
+.hero.no-bg {
+  background: none;
+	max-height: 350px;
+  color: #666;
+}
+
+.hero.no-bg h1 {
+  margin: 100px 64px 0;
+  font-size: 36px;
+}
+
 .hero h1 {
 	margin: 250px 0 45px 0;
 	font-weight: 300;
-	font-size: 45px
+	font-size: 45px;
+  text-align: center;
 }
 
 .hero h1 span {

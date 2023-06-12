@@ -1,0 +1,58 @@
+<header>
+  <section class="hero {% if from_news %} no-bg{% endif %}">
+    <div class="texture-overlay"></div>
+    <div class="container">
+      <div class="row nav-wrapper">
+        <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+          {% if from_news %}
+            <a href="/">
+              <img src="/img/logo-wallabag-black.svg" alt="wallabag logo">
+            </a>
+          {% else %}
+            <img src="/img/logo-wallabag.svg" alt="wallabag logo">
+          {% endif %}
+        </div>
+        {% if from_news == false %}
+        <div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
+          <p>MENU</p>
+          <a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#">
+            <span/>
+          </a>
+        </div>
+        {% else %}
+        <div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
+          <a href="/news">NEWS</a>
+        </div>
+        {% endif %}
+      </div>
+      <div class="row hero-content wp1">
+        <div class="col-md-12">
+        {% if from_news == false %}
+          <h1 class="animated fadeInDown">
+            Save and classify articles. Read them later. Freely.
+          </h1>
+          <div class="text-center">
+            <a href="#download" class="use-btn">
+              GET WALLABAG
+              <i class="fa fa-download"></i></a>
+            <a href="/news" class="use-btn">
+              NEWS
+              <i class="fa fa-newspaper-o"></i></a>
+            <a href="https://app.wallabag.it/register" class="use-btn">
+              TRY IT OUT
+              <i class="fa fa-user-plus"></i></a>
+          </div>
+          {% else %}
+          <h1 class="animated fadeIn">
+            {% if title %}
+            {{ title}}
+            {% else %}
+            With wallabag, archive the web freely. wallabag is a self hostable application for saving web pages.
+            {% endif %}
+          </h1>
+        {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+</header>

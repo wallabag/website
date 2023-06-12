@@ -1,0 +1,13 @@
+---
+layout: "news.html"
+---
+<ul class="newsList">
+  {% for post in collections.post reversed %}
+  <li class="newsList-item">
+    <a class="newsList-link" href="{{post.url}}">
+      <span class="newsList-text">{{ post.data.title }}</span>
+      <time class="newsList-time">{{post.data.date | date }}</time>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

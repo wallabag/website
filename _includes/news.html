@@ -1,0 +1,26 @@
+<html>
+  <head>
+    {% render "_head.html" %}
+    <link href="/css/news.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    {% render "_navigation.html", from_news: true, title: title %}
+    <div class="container">
+      <main class="container-News">{{ content }}</main>
+      <div class="newsPagination">
+        {% assign previousPost = collections.post | getPreviousCollectionItem %}
+        {% assign nextPost = collections.post | getNextCollectionItem %}
+        {% if nextPost %}
+          <a class="newsPagination-next" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+        {% else %}
+        <div>&nbsp;</div>
+        {% endif %}
+        {% if previousPost %}
+          <a class="newsPagination-prev" href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+        {% endif %}
+      </div>
+    </div>
+    {% render "_download.html" %}
+    {% render "_footer.html" %}
+  </body>
+</html>
