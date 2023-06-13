@@ -1,12 +1,12 @@
 {
     "name": "wallabag",
     "version": "1.0.0",
-    "description": "",
+    "description": "Sources of wallabag.org website",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "./node_modules/.bin/eleventy --serve",
-        "build": "./node_modules/.bin/eleventy"
+        "dev": "eleventy --serve",
+        "build": "eleventy"
     },
     "keywords": [],
     "author": "",
