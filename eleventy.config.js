@@ -25,7 +25,8 @@ module.exports = function(eleventyConfig) {
   // Copy static files to the root of _site
   eleventyConfig.addPassthroughCopy({
     "./static/": "/",
-    "./CNAME": "/CNAME"
+    "./CNAME": "/CNAME",
+    "./_redirects": "/_redirects"
   });
 
 };
