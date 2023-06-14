@@ -1,2 +1,2 @@
 # Redirects from what the browser requests to what we serve
-/en/news.rss                /rss.xml
+/en/news.rss                /feed.xml
