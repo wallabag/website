@@ -1,7 +1,7 @@
 ---
 title: 'wallabag on Late Night Linux podcast!'
 published: true
-date: 2023-06-16 09:00:00 +02:00
+date: 2023-06-15 17:00:00 +02:00
 ---
 
 > [Late Night Linux](https://latenightlinux.com/) is a podcast that takes a look at what’s happening with Linux and the wider tech industry. Every week, Joe, Félim, Graham and Will discuss the latest news and releases, and the broader issues and trends in the world of free and open source software.
