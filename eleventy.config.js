@@ -25,6 +25,4 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./static/": "/",
   });
-
-  eleventyConfig.ignores.delete("README.md");
 };
