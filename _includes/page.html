@@ -1,10 +1,10 @@
 <html>
   <head>
-    {% render "_head.html" %}
+    {% include "_head.html" %}
     <link href="/css/news.css" type="text/css" rel="stylesheet">
   </head>
   <body>
-    {% render "_navigation.html", from_news: true, title: title %}
+    {% include "_navigation.html", from_news: true, title: title %}
     <div class="container">
       <main class="container-News">{{ content }}</main>
       <div class="newsPagination">
@@ -20,7 +20,7 @@
         {% endif %}
       </div>
     </div>
-    {% render "_download.html" %}
-    {% render "_footer.html" %}
+    {% include "_download.html" %}
+    {% include "_footer.html" %}
   </body>
 </html>

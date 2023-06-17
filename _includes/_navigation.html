@@ -44,11 +44,7 @@
           </div>
           {% else %}
           <h1 class="animated fadeIn">
-            {% if title %}
-            {{ title}}
-            {% else %}
-            With wallabag, archive the web freely. wallabag is a self hostable application for saving web pages.
-            {% endif %}
+            {{ title | default: site.description }}
           </h1>
         {% endif %}
         </div>
