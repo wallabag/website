@@ -146,13 +146,9 @@
               <p>wallabag is supported by many <a href="https://en.wikipedia.org/wiki/News_aggregator">feed aggregators</a> (or RSS readers).</p>
               <p>Here is a non exhaustive list of them.</p>
               <ul class="rss">
-                <li><a href="https://miniflux.net/" class="rss-btn">Miniflux</a></li>
-                <li><a href="http://www.vienna-rss.com/" class="rss-btn">Vienna RSS</a></li>
-                <li><a href="https://freshrss.org/" class="rss-btn">FreshRSS</a></li>
-                <li><a href="https://tt-rss.org/" class="rss-btn">Tiny Tiny RSS</a></li>
-                <li><a href="https://github.com/ldleman/Leed" class="rss-btn">Leed</a></li>
-                <li><a href="https://jangernert.github.io/FeedReader/" class="rss-btn">FeedReader</a></li>
-                <li><a href="https://itunes.apple.com/us/app/fiery-feeds/id1158763303" class="rss-btn">Fiery Feeds</a></li>
+                {% for reader in readers %}
+                <li><a href="{{ reader.url }}" class="rss-btn">{{ reader.name }}</a></li>
+                {% endfor %}
               </ul>
             </div>
           </div>
