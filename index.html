@@ -4,42 +4,7 @@
    </head>
   <body>
 
-    <header>
-      <section class="hero">
-        <div class="texture-overlay"></div>
-        <div class="container">
-          <div class="row nav-wrapper">
-            <div class="col-md-6 col-sm-6 col-xs-6 text-left">
-              <img src="/img/logo-wallabag.svg" alt="wallabag logo">
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
-              <p>MENU</p>
-              <a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#">
-                <span/>
-              </a>
-            </div>
-          </div>
-          <div class="row hero-content wp1">
-            <div class="col-md-12">
-              <h1 class="animated fadeIn">
-                Save and classify articles. Read them later. Freely.
-              </h1>
-              <div class="text-center">
-                <a href="#download" class="use-btn">
-                  GET WALLABAG
-                  <i class="fa fa-download"></i></a>
-                <a href="/news" class="use-btn">
-                  NEWS
-                  <i class="fa fa-newspaper-o"></i></a>
-                <a href="https://app.wallabag.it/register" class="use-btn">
-                  TRY IT OUT
-                  <i class="fa fa-user-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </header>
+    {% include "_navigation.html", from_news: false, title: title %}
 
     <div id="content">
       <section class="video" id="video">
