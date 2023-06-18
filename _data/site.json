@@ -1,0 +1,14 @@
+{
+  "title": "Save the web, freely | wallabag: a self hostable application for saving web pages",
+  "description": "With wallabag, archive the web freely. wallabag is a self hostable application for saving web pages.",
+  "url": "https://wallabag.org",
+  "metadata": {
+    "email": "mailto:hello@wallabag.org",
+    "github": "https://github.com/wallabag",
+    "repo": "https://github.com/wallabag/wallabag",
+    "twitter": "https://twitter.com/wallabagapp",
+    "mastodon": "https://social.tcit.fr/@wallabag",
+    "facebook": "https://www.facebook.com/wallabag",
+    "paypal": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9UBA65LG3FX9Y&amp;lc=gb"
+  }
+}

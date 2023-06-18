@@ -1,12 +1,17 @@
 <meta charset="utf-8">
-<title>Save the web, freely | wallabag: a self hostable application for saving web pages</title>
-<meta name="generator" content="wallabag.org">
-<meta name="description" content="With wallabag, archive the web freely. wallabag is a self hostable application for saving web pages.">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>{{ title | default: site.title }}</title>
+
+<link  rel="stylesheet" href="/css/main.css" type="text/css">
+<link rel="stylesheet" href="/css/fork-awesome.css" integrity="" crossorigin="anonymous">
+
+<meta name="generator" content="{{ eleventy.generator }}">
+<meta name="description" content="{{ site.description }}">
+
 <meta property="og:title" content="wallabag.org">
 <meta property="og:description" content="Save and classify articles. Read them later. Freely.">
-<meta property="og:url" content="https://wallabag.org/en">
+<meta property="og:url" content="{{ site.url }}">
 <meta property="og:image" content="/img/wallabag_preview.png">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 <link rel="icon" href="/favicon.ico">
-<link rel="stylesheet" href="/css/fork-awesome.css" integrity="" crossorigin="anonymous">
-<link href="/css/main.css" type="text/css" rel="stylesheet">
