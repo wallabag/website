@@ -4,42 +4,7 @@
    </head>
   <body>
 
-    <header>
-      <section class="hero">
-        <div class="texture-overlay"></div>
-        <div class="container">
-          <div class="row nav-wrapper">
-            <div class="col-md-6 col-sm-6 col-xs-6 text-left">
-              <img src="/img/logo-wallabag.svg" alt="wallabag logo">
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
-              <p>MENU</p>
-              <a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#">
-                <span/>
-              </a>
-            </div>
-          </div>
-          <div class="row hero-content wp1">
-            <div class="col-md-12">
-              <h1 class="animated fadeIn">
-                Save and classify articles. Read them later. Freely.
-              </h1>
-              <div class="text-center">
-                <a href="#download" class="use-btn">
-                  GET WALLABAG
-                  <i class="fa fa-download"></i></a>
-                <a href="/news" class="use-btn">
-                  NEWS
-                  <i class="fa fa-newspaper-o"></i></a>
-                <a href="https://app.wallabag.it/register" class="use-btn">
-                  TRY IT OUT
-                  <i class="fa fa-user-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </header>
+    {% include "_navigation.html", from_news: false, title: title %}
 
     <div id="content">
       <section class="video" id="video">
@@ -146,13 +111,9 @@
               <p>wallabag is supported by many <a href="https://en.wikipedia.org/wiki/News_aggregator">feed aggregators</a> (or RSS readers).</p>
               <p>Here is a non exhaustive list of them.</p>
               <ul class="rss">
-                <li><a href="https://miniflux.net/" class="rss-btn">Miniflux</a></li>
-                <li><a href="http://www.vienna-rss.com/" class="rss-btn">Vienna RSS</a></li>
-                <li><a href="https://freshrss.org/" class="rss-btn">FreshRSS</a></li>
-                <li><a href="https://tt-rss.org/" class="rss-btn">Tiny Tiny RSS</a></li>
-                <li><a href="https://github.com/ldleman/Leed" class="rss-btn">Leed</a></li>
-                <li><a href="https://jangernert.github.io/FeedReader/" class="rss-btn">FeedReader</a></li>
-                <li><a href="https://itunes.apple.com/us/app/fiery-feeds/id1158763303" class="rss-btn">Fiery Feeds</a></li>
+                {% for reader in readers %}
+                <li><a href="{{ reader.url }}" class="rss-btn">{{ reader.name }}</a></li>
+                {% endfor %}
               </ul>
             </div>
           </div>

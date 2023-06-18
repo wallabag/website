@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Miniflux",
+    "url": "https://miniflux.net/"
+  },
+  {
+    "name": "Vienna RSS",
+    "url": "http://www.vienna-rss.com/"
+  },
+  {
+    "name": "FreshRSS",
+    "url": "http://www.vienna-rss.com/"
+  },
+  {
+    "name": "Tiny Tiny RSS",
+    "url": "https://tt-rss.org/"
+  },
+  {
+    "name": "Leed",
+    "url": "https://tt-rss.org/"
+  },
+  {
+    "name": "FeedReader",
+    "url": "https://jangernert.github.io/FeedReader/"
+  },
+  {
+    "name": "Fiery Feeds",
+    "url": "https://itunes.apple.com/us/app/fiery-feeds/id1158763303"
+  }
+]
