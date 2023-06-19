@@ -29,7 +29,7 @@ Most of this work was done by [Yassine](https://github.com/yguedidi): thank you 
 
 ## Update your instance
 
-📈  **To update your instance**, [just run `make update`.](https://doc.wallabag.org/en/admin/upgrade.html).
+📈  **To update your instance**, [just run `make update`](https://doc.wallabag.org/en/admin/upgrade.html).
 Don't forget to make a backup of your instance (database and files).
 
 _🤝  A little reminder that **you can support our work** on wallabag by sponsoring us on [Liberapay](https://liberapay.com/wallabag) or subscribe on [wallabag.it](https://www.wallabag.it/en). Thanks!_
