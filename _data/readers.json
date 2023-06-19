@@ -5,11 +5,11 @@
   },
   {
     "name": "Vienna RSS",
-    "url": "http://www.vienna-rss.com/"
+    "url": "https://www.vienna-rss.com/"
   },
   {
     "name": "FreshRSS",
-    "url": "http://www.vienna-rss.com/"
+    "url": "https://www.freshrss.org/"
   },
   {
     "name": "Tiny Tiny RSS",
@@ -17,11 +17,11 @@
   },
   {
     "name": "Leed",
-    "url": "https://tt-rss.org/"
+    "url": "https://github.com/LeedRSS/Leed"
   },
   {
-    "name": "FeedReader",
-    "url": "https://jangernert.github.io/FeedReader/"
+    "name": "Communique (fork of FeedReader) ",
+    "url": "https://github.com/Suzie97/Communique"
   },
   {
     "name": "Fiery Feeds",
