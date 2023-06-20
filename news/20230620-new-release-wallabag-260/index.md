@@ -1,7 +1,8 @@
 ---
 title: 'wallabag 2.6.0'
 published: true
-date: 2023-06-20 12:00:00 +02:00
+date: 2
+  023-06-20 12:00:00 +02:00
 ---
 
 wallabag 🦘turns 10 🎂 ! To celebrate this birthday, we are pleased to announce the release of [wallabag 2.6.0](https://github.com/wallabag/wallabag/releases/tag/2.6.0).
@@ -15,17 +16,31 @@ I hope you will love the new features and the fixes we made.
 wallabag is 10: it's starting to get a little rusty. That's why we made a lot of effort to improve technical stuff, under the hood.
 Most of this work was done by [Yassine](https://github.com/yguedidi): thank you so much! Thanks to him, wallabag can go forward (for the next 10 years?).
 
-### Mass action to tag entries
+### Mass action to tag entries, by @Kdecherf
 
-// screenshots and explanations
+We now have a nice interface on card view (thank you, @Simounet!). A checkbox is available on each card.
 
-### Enhance the availability of the add a new URL in the web interface
+And Kevin added the mass tagging feature: what a pleasure to add many tags on several articles!
 
-// screenshots and explanations
+![mass_tag.png](mass_tag.png)
 
-### New setting to show / hide articles thumbnails
+### Enhance the availability of the add a new URL in the web interface, by @Simounet
 
-// screenshot and explanations
+The "+" icon in the header bar is not so big. When you have a lot of URL to save, it can be painful to click exactly on the icon.
+
+@Simounet increased the clickable area and you can now click on all the header bar.
+
+### New setting to show / hide articles thumbnails, by @nicosomb
+
+@Oppen asked us to add a new setting to show or hide articles thumbnails.
+
+This feature is so useful for slow connections or for instances which have few resources.
+
+That's why we developed it for 2.6.0. See below the result when you chose to hide thumbnails.
+
+![img_list_no_preview.png](img_list_no_preview.png)
+
+![img_card_no_preview.png](img_card_no_preview.png)
 
 ## Update your instance
 
