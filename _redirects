@@ -3,5 +3,5 @@
 /feeds/all.atom.xml         /feed.xml
 
 # package download redirect from wllbg.org
-/latest-v2                  https://github.com/wallabag/wallabag/releases/download/2.5.4/wallabag-2.5.4.tar.gz
-/latest-v2-package          https://github.com/wallabag/wallabag/releases/download/2.5.4/wallabag-2.5.4.tar.gz
+/latest-v2                  https://github.com/wallabag/wallabag/releases/download/2.6.0/wallabag-2.6.0.tar.gz
+/latest-v2-package          https://github.com/wallabag/wallabag/releases/download/2.6.0/wallabag-2.6.0.tar.gz
