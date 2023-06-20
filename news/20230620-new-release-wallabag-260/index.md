@@ -1,8 +1,7 @@
 ---
 title: 'wallabag 2.6.0'
 published: true
-date: 2
-  023-06-20 12:00:00 +02:00
+date: 2023-06-20 12:00:00 +02:00
 ---
 
 wallabag 🦘turns 10 🎂 ! To celebrate this birthday, we are pleased to announce the release of [wallabag 2.6.0](https://github.com/wallabag/wallabag/releases/tag/2.6.0).
