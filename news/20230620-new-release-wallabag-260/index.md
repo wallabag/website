@@ -15,23 +15,23 @@ I hope you will love the new features and the fixes we made.
 wallabag is 10: it's starting to get a little rusty. That's why we made a lot of effort to improve technical stuff, under the hood.
 Most of this work was done by [Yassine](https://github.com/yguedidi): thank you so much! Thanks to him, wallabag can go forward (for the next 10 years?).
 
-### Mass action to tag entries, by @Kdecherf
+### Mass action to tag entries, by [@Kdecherf](https://github.com/Kdecherf)
 
-We now have a nice interface on card view (thank you, @Simounet!). A checkbox is available on each card.
+We now have a nice interface on card view (thank you, [@Simounet](https://github.com/Simounet)!). A checkbox is available on each card.
 
 And Kevin added the mass tagging feature: what a pleasure to add many tags on several articles!
 
 ![mass_tag.png](mass_tag.png)
 
-### Enhance the availability of the add a new URL in the web interface, by @Simounet
+### Enhance the availability of the add a new URL in the web interface, by [@Simounet](https://github.com/Simounet)
 
 The "+" icon in the header bar is not so big. When you have a lot of URL to save, it can be painful to click exactly on the icon.
 
-@Simounet increased the clickable area and you can now click on all the header bar.
+[@Simounet](https://github.com/Simounet) increased the clickable area and you can now click on all the header bar.
 
-### New setting to show / hide articles thumbnails, by @nicosomb
+### New setting to show / hide articles thumbnails, by [@nicosomb](https://github.com/nicosomb)
 
-@Oppen asked us to add a new setting to show or hide articles thumbnails.
+[@Oppen](https://github.com/Oppen) asked us to add a new setting to show or hide articles thumbnails.
 
 This feature is so useful for slow connections or for instances which have few resources.
 
