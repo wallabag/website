@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 
 module.exports = async function() {
-  console.log( "Fetching new github stargazers count…" );
+  console.log( "Fetching Github latest release" );
 
   // GitHub API: https://developer.github.com/v3/repos/#get
   return fetch("https://api.github.com/repos/wallabag/wallabag/releases/latest")
