@@ -1,0 +1,11 @@
+---
+permalink: /_redirects
+eleventyExcludeFromCollections: true
+---
+# Redirects from what the browser requests to what we serve
+/en/news.rss                /feed.xml
+/feeds/all.atom.xml         /feed.xml
+
+# package download redirect from wllbg.org
+/latest-v2                  https://github.com/wallabag/wallabag/releases/download/{{ github.appVersion }}/wallabag-{{ github.appVersion }}.tar.gz
+/latest-v2-package          https://github.com/wallabag/wallabag/releases/download/{{ github.appVersion }}/wallabag-{{ github.appVersion }}.tar.gz
