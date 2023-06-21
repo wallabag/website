@@ -7436,19 +7436,18 @@ a:focus {
 	transform: translateY(-10px) rotate(-45deg)
 }
 
-.navicon {
-	position: relative;
-	height: 26px
+.navicon a {
+  margin: 0 10px;
+  &:first-child {
+    margin-left:0;
+  }
+  &:last-child {
+    margin-right:0;
+  }
 }
 
 .navicon p {
 	margin: 1px 50px 0 0
-}
-
-.navicon-fixed {
-	position: fixed;
-	top: 59px;
-	right: 143px
 }
 
 .hero {
