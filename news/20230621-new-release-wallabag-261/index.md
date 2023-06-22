@@ -6,7 +6,7 @@ date: 2023-06-21 08:00:00 +02:00
 
 ⚠️ **We had issues with our update process in 2.6.0 release: this release fixes one of them. Be careful, it may possible that we have other unknown issues. Please do backups.**
 
-If you have issue with this issue `You have requested a non-existent service "scheb_two_factor.security.google_authenticator".`, [please read this message]([https://github.com/wallabag/wallabag/issues/6649](https://github.com/wallabag/wallabag/issues/6649#issuecomment-1600262599)). 
+If you have issue with this issue `You have requested a non-existent service "scheb_two_factor.security.google_authenticator".`, [please read this message](https://github.com/wallabag/wallabag/issues/6649#issuecomment-1600262599). 
 
 ## Update your instance
 
