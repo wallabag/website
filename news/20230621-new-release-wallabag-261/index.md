@@ -11,7 +11,7 @@ If you have issue with this issue `You have requested a non-existent service "sc
 ⚠️ **There are two points to focus for that update**:
 
 1. We added new fields in the database, don't forget to run migration (by running `make update`) otherwise your wallabag won't work.
-2. We've updated the mailer config which needs to be replicated otherwise the image might not work.
+2. We've updated the mailer config which needs to be replicated otherwise it might not work.
 
    We removed in `app/config/parameters.yml`:
    - `mailer_transport`
