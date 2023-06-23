@@ -8,6 +8,22 @@ date: 2023-06-21 08:00:00 +02:00
 
 If you have issue with this issue `You have requested a non-existent service "scheb_two_factor.security.google_authenticator".`, [please read this message](https://github.com/wallabag/wallabag/issues/6649#issuecomment-1600262599). 
 
+⚠️ **There are two points to focus for that update**:
+
+1. We added new fields in the database, don't forget to run migration (by running `make update`) otherwise your wallabag won't work.
+2. We've updated the mailer config which needs to be replicated otherwise the image might not work.
+
+   We removed in `app/config/parameters.yml`:
+   - `mailer_transport`
+   - `mailer_user`
+   - `mailer_password`
+   - `mailer_host`
+   - `mailer_port`
+   - `mailer_encryption`
+   - `mailer_auth_mode`
+
+   And we added `mailer_dns` as a replacement. Here is [an example of DSN](https://symfony.com/doc/4.4/mailer.html#using-built-in-transports): `smtp://user:pass@smtp.example.com:port`
+
 ## Update your instance
 
 📈  **To update your instance**, [just run `make update`](https://doc.wallabag.org/en/admin/upgrade.html).
