@@ -22,7 +22,7 @@ If you have issue with this issue `You have requested a non-existent service "sc
    - `mailer_encryption`
    - `mailer_auth_mode`
 
-   And we added `mailer_dns` as a replacement. Here is [an example of DSN](https://symfony.com/doc/4.4/mailer.html#using-built-in-transports): `smtp://user:pass@smtp.example.com:port`
+   And we added `mailer_dsn` as a replacement. Here is [an example of DSN](https://symfony.com/doc/4.4/mailer.html#using-built-in-transports): `smtp://user:pass@smtp.example.com:port`
 
 ## Update your instance
 
