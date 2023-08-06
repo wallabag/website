@@ -20,11 +20,17 @@ module.exports = function(eleventyConfig) {
   // Copy _statics while using `--serve`
   eleventyConfig.setServerPassthroughCopyBehavior("copy");
 
-  eleventyConfig.addPassthroughCopy('news/**/*.{jpg,jpeg,png,gif}');
+  eleventyConfig.addPassthroughCopy('src/news/**/*.{jpg,jpeg,png,gif}');
 
   // Copy static files to the root of _site
   eleventyConfig.addPassthroughCopy({
-    "./static/": "/",
-    "./_redirects": "/_redirects"
+    "./src/static/": "/",
+    "./src/_redirects": "/_redirects"
   });
+
+  return {
+    dir: {
+      input: 'src',
+    }
+  }
 };
