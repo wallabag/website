@@ -20,6 +20,7 @@ _🤝  A little reminder that **you can support our work** on wallabag by sponso
 * Replace GET way to POST way to delete API client by @nicosomb [https://github.com/wallabag/wallabag/commit/ffcc5c9062fcc8cd922d7d6d65edbe5efae96806](https://github.com/wallabag/wallabag/commit/ffcc5c9062fcc8cd922d7d6d65edbe5efae96806)
 
 ### Improvement
+* Update site parsing configuration [https://github.com/j0k3r/graby-site-config/releases/tag/1.0.173](https://github.com/j0k3r/graby-site-config/releases/tag/1.0.173) 
 * Add confirmation before reload entry by @nicosomb [https://github.com/wallabag/wallabag/pull/6778](https://github.com/wallabag/wallabag/pull/6778)
 * Remove external dependencies on howto page by @viktoriussuwandi [https://github.com/wallabag/wallabag/pull/6775](https://github.com/wallabag/wallabag/pull/6775)
 
