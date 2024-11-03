@@ -2,6 +2,7 @@
 title: 'wallabag 2.6.10'
 published: true
 date: 2024-11-03 11:00:00 +02:00
+description: New release of wallabag with Omnivore import. 
 ---
 
 Here is the latest release of wallabag.
