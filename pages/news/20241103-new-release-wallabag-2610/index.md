@@ -21,10 +21,10 @@ We added the Omnivore import.
 
 ### Fixes
 
-* Update site config & tests by @j0k3r in https://github.com/wallabag/wallabag/pull/7582 (fixes "Key provided is shorter
-  than 256 bits, only 240 bits provided" https://github.com/wallabag/wallabag/issues/7531)
-* Update site config by @yguedidi in https://github.com/wallabag/wallabag/pull/7623
-* Replace gitter with matrix by @nicosomb in https://github.com/wallabag/wallabag/pull/7753
+* Update site config & tests by @j0k3r in [https://github.com/wallabag/wallabag/pull/7582](https://github.com/wallabag/wallabag/pull/7582) (fixes "Key provided is shorter
+  than 256 bits, only 240 bits provided" [https://github.com/wallabag/wallabag/issues/7531](https://github.com/wallabag/wallabag/issues/7531))
+* Update site config by @yguedidi in [https://github.com/wallabag/wallabag/pull/7623](https://github.com/wallabag/wallabag/pull/7623)
+* Replace gitter with matrix by @nicosomb in [https://github.com/wallabag/wallabag/pull/7753](https://github.com/wallabag/wallabag/pull/7753)
 
 You can read the [full changelog](https://github.com/wallabag/wallabag/compare/2.6.9...2.6.10) on GitHub.
 
