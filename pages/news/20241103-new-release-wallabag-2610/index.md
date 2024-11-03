@@ -17,7 +17,7 @@ We added the Omnivore import.
 ## What's Changed
 ### Improvement
 
-* Add Omnivore import by @nicosomb in https://github.com/wallabag/wallabag/pull/7754
+* Add Omnivore import by @nicosomb in [https://github.com/wallabag/wallabag/pull/7754](https://github.com/wallabag/wallabag/pull/7754)
 
 ### Fixes
 
