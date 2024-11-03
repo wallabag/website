@@ -50,6 +50,7 @@
           <h1 class="animated fadeIn">
             {{ title | default: site.description }}
           </h1>
+          {% if date is not null %}<p class="text-center">{{ page.date | date }}</p>{% endif %}
         {% endif %}
         </div>
       </div>

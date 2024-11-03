@@ -1,7 +1,8 @@
 ---
 title: 'Migrate from Omnivore to wallabag'
 published: true
-date: 2024-11-01 11:00:00 +02:00
+date: 2024-11-01
+description: About Omnivore shutdown and migration to wallabag.
 ---
 The read-it-later app Omnivore recently announced that [it is joining the ElevenLabs company](https://blog.omnivore.app/p/omnivore-is-joining-elevenlabs). Unfortunately, as part of this process, they also announced that the service will be shut down, and all user data will be deleted at the end of November.
 
