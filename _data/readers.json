@@ -1,5 +1,9 @@
 [
   {
+    "name": "Unread",
+    "url": "https://www.goldenhillsoftware.com/unread/"
+  },
+  {
     "name": "Miniflux",
     "url": "https://miniflux.net/"
   },
