@@ -1,5 +1,5 @@
 ---
-title: '"wallabag, a strong competitor" said TechCrunch'
+title: '« wallabag, a strong competitor » said TechCrunch'
 published: true
 date: 2024-11-26 09:00:00 +02:00
 description: An article on Techcrunch talk about us.
