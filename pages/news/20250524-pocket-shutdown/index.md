@@ -1,5 +1,5 @@
 ---
-title: '"So Long, and Thanks for all the Fish" Pocket shuts down but open web remains'
+title: 'So Long, and Thanks for all the Fish: Pocket shuts down but open web remains'
 published: true
 date: 2025-05-24
 description: About Pocket shutdown and migration to wallabag.
