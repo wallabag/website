@@ -22,7 +22,7 @@ So Long, and Thanks for all the Fish, Pocket; Or we should say: thanks for pushi
 
 ## Surviving the web by being open
 
-It's always bittersweet to watch a service shutting down, especially when this one was widely known and used. Omnivore is another read-it-later service that was [shut down in late 2024](https://wallabag.org/news/20241031-migrate-from-omnivore/). In both cases it was the decision of a for-profit coproration killing a product they bought. Mozilla explained that their decision was made because "the web and the way we are using it changed a lot". Even though this statement is true, **we still strongly believe in giving power to people and helping them to keep control of their data and privacy**.
+It's always bittersweet to watch a service shutting down, especially when this one was widely known and used. Omnivore is another read-it-later service that was [shut down in late 2024](https://wallabag.org/news/20241031-migrate-from-omnivore/). In both cases it was the decision of a for-profit corporation killing a product they bought. Mozilla explained that their decision was made because "the web and the way we are using it changed a lot". Even though this statement is true, **we still strongly believe in giving power to people and helping them to keep control of their data and privacy**.
 
 That's why we still continue to develop wallabag, 12 years after its creation.
 
