@@ -1,5 +1,5 @@
 const { DateTime } = require('luxon');
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginRss = require("@11ty/eleventy-plugin-rss").default;
 
 module.exports = function(eleventyConfig) {
 
