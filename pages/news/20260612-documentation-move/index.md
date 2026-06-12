@@ -5,7 +5,7 @@ date: 2026-06-12 14:00:00 +02:00
 description:
 ---
 
-Recently, we decided [to archive our documentation repository](https://github.com/wallabag/doc). But don't worry, the wallabag doc is not dead: we moved it [into the main repository of the project](https://github.com/wallabag/wallabag/tree/master/doc).
+Recently, we decided to [merge the documentation repository into the wallabag code repository](https://github.com/wallabag/wallabag/pull/8750). This will greatly simplify contribution workflows by avoiding to maintain and contribute to a separate repository.
 
 With this change, it's easier to have a documentation per version. The contributors who add or change features in the project can now easily update it, without editing an other project.
 
