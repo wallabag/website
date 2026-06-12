@@ -9,4 +9,6 @@ Recently, we decided to [merge the documentation repository into the wallabag co
 
 This change will also enable us to easily maintain documentations dedicated to minor versions.
 
-One thing that hasn't changed, the place where you can read this documentation: [https://doc.wallabag.org/](https://doc.wallabag.org/)!
+The documentation for the current release is still accessible on [https://doc.wallabag.org/](https://doc.wallabag.org/). Contributions can now be done on [https://github.com/wallabag/wallabag/tree/master/doc](https://github.com/wallabag/wallabag/tree/master/doc).
+
+Finally as a consequence of this merge, we will archive the former doc repository.
