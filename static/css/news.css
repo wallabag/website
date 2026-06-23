@@ -27,6 +27,29 @@
   text-decoration-color: #3f6184;
 }
 
+.container-News blockquote {
+  margin: 32px 0;
+  padding: 22px 24px 22px 28px;
+  border-left: 6px solid #3f6184;
+  border-radius: 0 6px 6px 0;
+  background-color: #f6f9fa;
+  color: #23384d;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.container-News blockquote p {
+  display: block;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+}
+
+.container-News blockquote p + p {
+  margin-top: 14px;
+}
+
 .newsList {
   margin: 80px 0;
 }
@@ -78,6 +101,16 @@
 }
 
 @media (max-width:768px) {
+  .container-News {
+    margin: 48px auto 40px;
+  }
+
+  .container-News blockquote {
+    margin: 28px 0;
+    padding: 18px 18px 18px 20px;
+    font-size: 18px;
+  }
+
   .newsPagination {
     flex-direction: column;
     margin-bottom: 35px;

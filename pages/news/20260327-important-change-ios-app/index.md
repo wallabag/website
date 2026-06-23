@@ -1,6 +1,5 @@
 ---
 title: 'Important change regarding the official wallabag iOS application'
-draft: true
 date: 2026-04-06 18:00:00 +02:00
 description:
 ---
