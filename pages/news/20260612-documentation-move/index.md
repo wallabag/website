@@ -1,6 +1,5 @@
 ---
 title: 'Change on the documentation repository'
-draft: true
 date: 2026-06-12 14:00:00 +02:00
 description:
 ---
