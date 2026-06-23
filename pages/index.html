@@ -7,6 +7,32 @@
     {% include "_navigation.html", from_news: false, title: title %}
 
     <div id="content">
+      {% assign latestPost = collections.post | reverse | first %}
+      <section class="latest-blog" id="latest-blog">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 wp4">
+              <p class="latest-blog-label">Latest from the blog</p>
+              <article class="latest-blog-post">
+                <div class="latest-blog-content">
+                  <h1><a href="{{ latestPost.url }}">{{ latestPost.data.title }}</a></h1>
+                  <time datetime="{{ latestPost.date }}">{{ latestPost.date | date }}</time>
+                  {% if latestPost.data.description %}
+                    <p>{{ latestPost.data.description }}</p>
+                  {% else %}
+                    <p>{{ latestPost.templateContent | strip_html | strip | truncate: 180 }}</p>
+                  {% endif %}
+                </div>
+                <div class="latest-blog-actions">
+                  <a href="{{ latestPost.url }}" class="rss-btn">Read the post</a>
+                  <a href="/news/" class="rss-btn">All blog posts</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="video" id="video">
         <div class="container">
           <div class="row">
