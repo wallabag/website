@@ -1,0 +1,15 @@
+<html lang="{{ lang | default: 'en' }}">
+  <head>
+    {% include "_head.html" %}
+    <link href="/css/news.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    {% include "_navigation.html", from_news: true, title: title %}
+    <div class="container">
+      <main id="content" class="container-News contentPage">{{ content }}</main>
+    </div>
+    {% include "_download.html" %}
+    {% include "_footer.html" %}
+  </body>
+</html>
