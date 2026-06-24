@@ -25,20 +25,6 @@ $(document).ready(function() {
     offset: '85%'
   });
 
-  /***************** Flickity ******************/
-  // $('#featuresSlider').flickity({
-  //   cellAlign: 'left',
-  //   contain: true,
-  //   prevNextButtons: false
-  // });
-
-  $('#showcaseSlider').flickity({
-    cellAlign: 'left',
-    contain: true,
-    prevNextButtons: false,
-    imagesLoaded: true
-  });
-
   /***************** Fancybox ******************/
   $(".youtube-media").on("click", function() {
     if ($(window).width() <= 768) {
@@ -57,22 +43,38 @@ $(document).ready(function() {
   // });
 
   /***************** Nav Transformicon ******************/
+  function setOverlay(open) {
+    $(".nav-toggle")
+      .toggleClass("active", open)
+      .attr("aria-expanded", open ? "true" : "false");
+    $(".overlay-boxify")
+      .toggleClass("open", open)
+      .attr("aria-hidden", open ? "false" : "true");
+  }
+
   /* When user clicks the Icon */
-  $(".nav-toggle").click(function() {
-    $(this).toggleClass("active");
-    $(".overlay-boxify").toggleClass("open");
+  $(".nav-toggle").click(function(event) {
+    event.preventDefault();
+    setOverlay(!$(".overlay-boxify").hasClass("open"));
   });
 
   /* When user clicks a link */
-  $(".overlay ul li a").click(function() {
-    $(".nav-toggle").toggleClass("active");
-    $(".overlay-boxify").toggleClass("open");
+  $(".overlay ul li a").click(function(event) {
+    event.stopPropagation();
+    setOverlay(false);
   });
 
   /* When user clicks outside */
-  $(".overlay").click(function() {
-    $(".nav-toggle").toggleClass("active");
-    $(".overlay-boxify").toggleClass("open");
+  $(".overlay").click(function(event) {
+    if (event.target === this) {
+      setOverlay(false);
+    }
+  });
+
+  $(document).keyup(function(event) {
+    if (event.key === "Escape") {
+      setOverlay(false);
+    }
   });
 
   /***************** Smooth Scrolling ******************/

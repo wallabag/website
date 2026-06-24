@@ -1,12 +1,21 @@
 <section class="download" id="download">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 text-center wp4">
-        <h1>Want to give it a try?</h1>
-        <p><a href="https://doc.wallabag.org/en/admin/installation/installation.html#installation" class="download-btn">DOWNLOAD <i class="fa fa-download"></i></a><br></p>
-        <p>Last release: wallabag {{ github.appVersion }}<br>
-          (md5 checksum: 87fd1265ee9efb2d2333dbe406f687f0)<br>
-            You can download our <a href="{{ site.metadata.repo }}/releases" target="_blank">previous releases here</a>.</p>
+      <div class="col-md-12 wp4">
+        <div class="download-heading">
+          <p>Self-host wallabag</p>
+          <h1>Download wallabag and run your own read-it-later instance.</h1>
+        </div>
+        <div class="download-release-panel">
+          {% assign releaseVersion = github.appVersion | default: site.release.version %}
+          <div>
+            <p class="download-release-label">Latest release</p>
+            <h2><a href="{{ site.release.blogPost }}">wallabag {{ releaseVersion }}</a></h2>
+            <p>md5 checksum: <code>{{ site.release.checksum }}</code></p>
+            <p>Previous releases are available on <a href="{{ site.metadata.repo }}/releases" target="_blank">GitHub</a>.</p>
+          </div>
+          <a href="https://doc.wallabag.org/en/admin/installation/installation.html#installation" class="download-btn">Installation guide <i class="fa fa-arrow-right"></i></a>
+        </div>
       </div>
     </div>
   </div>

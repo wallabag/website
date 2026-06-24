@@ -3,6 +3,11 @@
   "description": "With wallabag, archive the web freely. wallabag is a self hostable application for saving web pages.",
   "url": "https://wallabag.org",
   "rss": "/feed.xml",
+  "release": {
+    "version": "2.6.14",
+    "blogPost": "/news/20251007-new-release-wallabag-2614/",
+    "checksum": "87fd1265ee9efb2d2333dbe406f687f0"
+  },
   "metadata": {
     "email": "mailto:hello@wallabag.org",
     "github": "https://github.com/wallabag",
