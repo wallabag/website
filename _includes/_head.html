@@ -1,19 +1,33 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>{{ title | default: site.title }}</title>
+{% assign metaTitle = title | default: site.title %}
+{% assign metaDescription = description | default: site.description %}
+{% assign metaUrl = site.url | append: page.url %}
+{% assign metaLang = lang | default: 'en' %}
+{% assign metaLocale = 'en_US' %}
+{% if metaLang == 'fr' %}
+  {% assign metaLocale = 'fr_FR' %}
+{% endif %}
+
+<title>{{ metaTitle }}</title>
 
 <link  rel="stylesheet" href="/css/main.css" type="text/css">
 <link rel="stylesheet" href="/css/fork-awesome.css" integrity="" crossorigin="anonymous">
 
 <meta name="generator" content="{{ eleventy.generator }}">
 {% if date is not null %}<meta name="date" content="{{ page.date | date }}">{% endif %}
-<meta name="description" content="{{ site.description }}">
+<meta name="description" content="{{ metaDescription }}">
+<link rel="canonical" href="{{ metaUrl }}">
 
-<meta property="og:title" content="{{ title | default: site.title }}">
-<meta property="og:url" content="{{ page.url | default: site.url }}">
-<meta property="og:image" content="/img/wallabag_preview.png">
-<meta property="og:description" content="{{ description }}">
+<meta property="og:title" content="{{ metaTitle }}">
+<meta property="og:url" content="{{ metaUrl }}">
+<meta property="og:locale" content="{{ metaLocale }}">
+<meta property="og:image" content="{{ site.url }}/img/wallabag_preview.png">
+<meta property="og:description" content="{{ metaDescription }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ metaTitle }}">
+<meta name="twitter:description" content="{{ metaDescription }}">
 
 <link rel="icon" href="/favicon.ico">
 

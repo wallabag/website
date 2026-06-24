@@ -2,7 +2,8 @@
 title: 'Apéro wallabag à Paris le jeudi 17 juillet 2025'
 published: true
 date: 2025-07-01 14:00:00 +02:00
-description: Y'aura des stickers !
+description: Rendez-vous à Paris pour rencontrer l'équipe wallabag autour d'un verre.
+lang: fr
 ---
 
 Nous vous donnons rendez-vous le jeudi 17 juillet à partir de 18h30 au bar Chez Jean-Claude, 9 rue Vandamme (site internet : [https://www.chezjeanclaudeleretour.fr/](https://www.chezjeanclaudeleretour.fr/)).

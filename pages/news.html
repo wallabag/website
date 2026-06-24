@@ -1,13 +1,54 @@
 ---
 layout: "page.html"
+title: "wallabag news"
+description: "Read wallabag project news, release notes, migration guides and community updates."
 ---
-<ul class="newsList">
-  {% for post in collections.post reversed %}
-  <li class="newsList-item">
-    <a class="newsList-link" href="{{post.url}}">
-      <span class="newsList-text">{{ post.data.title }}</span>
-      <time class="newsList-time">{{post.data.date | date }}</time>
-    </a>
-  </li>
-  {% endfor %}
-</ul>
+{% assign reversedPosts = collections.post | reverse %}
+{% assign latestPost = reversedPosts | first %}
+
+<section class="newsHome">
+  <div class="newsIntro">
+    <p class="newsEyebrow">Project updates</p>
+    <h2>News, releases and migration notes from wallabag.</h2>
+    <p>Follow the project, read release notes, and find practical updates for people moving from other read-it-later services.</p>
+    <p><a href="{{ site.rss }}" class="newsRss">Subscribe with RSS <i class="fa fa-rss"></i></a></p>
+  </div>
+
+  <article class="newsFeatured">
+    <p class="newsFeatured-label">Latest post</p>
+    <h2><a href="{{ latestPost.url }}">{{ latestPost.data.title }}</a></h2>
+    <time datetime="{{ latestPost.date }}">{{ latestPost.date | date }}</time>
+    {% if latestPost.data.description %}
+      <p>{{ latestPost.data.description }}</p>
+    {% else %}
+      <p>{{ latestPost.templateContent | strip_html | strip | truncate: 220 }}</p>
+    {% endif %}
+  </article>
+
+  <h2 class="newsSectionTitle">Recent posts</h2>
+  <div class="newsCards">
+    {% for post in reversedPosts limit: 8 offset: 1 %}
+    <article class="newsCard">
+      <time datetime="{{ post.date }}">{{ post.data.date | date }}</time>
+      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      {% if post.data.description %}
+        <p>{{ post.data.description }}</p>
+      {% else %}
+        <p>{{ post.templateContent | strip_html | strip | truncate: 150 }}</p>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+
+  <h2 class="newsSectionTitle">All posts</h2>
+  <ul class="newsList">
+    {% for post in reversedPosts %}
+    <li class="newsList-item">
+      <a class="newsList-link" href="{{post.url}}">
+        <span class="newsList-text">{{ post.data.title }}</span>
+        <time class="newsList-time">{{post.data.date | date }}</time>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,7 +1,7 @@
 ---
 title: 'Change on the documentation repository'
 date: 2026-06-12 14:00:00 +02:00
-description:
+description: The wallabag documentation now lives in the main wallabag code repository to simplify contributions.
 ---
 
 Recently, we decided to [merge the documentation repository into the wallabag code repository](https://github.com/wallabag/wallabag/pull/8750). This will greatly simplify contribution workflows by avoiding to maintain and contribute to a separate repository.

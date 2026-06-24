@@ -1,24 +1,31 @@
-<html>
+<html lang="{{ lang | default: 'en' }}">
   <head>
     {% include "_head.html" %}
     <link href="/css/news.css" type="text/css" rel="stylesheet">
   </head>
   <body>
+    <a class="skip-link" href="#content">Skip to content</a>
     {% include "_navigation.html", from_news: true, title: title %}
     <div class="container">
-      <main class="container-News">{{ content }}</main>
-      <div class="newsPagination">
+      <main id="content" class="container-News">{{ content }}</main>
+      {% if page.url != "/news/" %}
+      <nav class="newsPagination" aria-label="Post navigation">
         {% assign previousPost = collections.post | getPreviousCollectionItem %}
         {% assign nextPost = collections.post | getNextCollectionItem %}
         {% if nextPost %}
-          <a class="newsPagination-next" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-        {% else %}
-        <div>&nbsp;</div>
+          <a class="newsPagination-link newsPagination-next" href="{{ nextPost.url }}">
+            <span class="newsPagination-label">Newer article</span>
+            <span class="newsPagination-title">{{ nextPost.data.title }}</span>
+          </a>
         {% endif %}
         {% if previousPost %}
-          <a class="newsPagination-prev" href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+          <a class="newsPagination-link newsPagination-prev" href="{{ previousPost.url }}">
+            <span class="newsPagination-label">Older article</span>
+            <span class="newsPagination-title">{{ previousPost.data.title }}</span>
+          </a>
         {% endif %}
-      </div>
+      </nav>
+      {% endif %}
     </div>
     {% include "_download.html" %}
     {% include "_footer.html" %}
