@@ -1,7 +1,7 @@
 ---
 title: 'Important change regarding the official wallabag iOS application'
 date: 2026-04-06 18:00:00 +02:00
-description:
+description: The wallabag iOS app source repository is archived and the app is no longer announced as the official open source iOS app.
 ---
 
 For five years, the wallabag iOS application source code was maintained and

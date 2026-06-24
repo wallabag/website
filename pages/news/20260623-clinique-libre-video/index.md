@@ -1,7 +1,8 @@
 ---
 title: 'wallabag x La Clinique du Libre : une heure pour améliorer le projet'
 date: 2026-06-23 16:00:00 +02:00
-description:
+description: Retour sur notre passage à La Clinique du Libre, une session UX pour améliorer wallabag.
+lang: fr
 ---
 
 _As the video is in French, the rest of this blog post is in French too._
