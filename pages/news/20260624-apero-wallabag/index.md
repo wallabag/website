@@ -7,7 +7,7 @@ lang: fr
 
 Après une première édition en 2025, nous renouvelons l'opération cette année.
 
-Nous vous donnons rendez-vous le mercredi 29 juillet à partir de 18h30 au bar Chez Jean-Claude, 9 rue Vandamme (site internet : [https://www.chezjeanclaudeleretour.fr/](https://www.chezjeanclaudeleretour.fr/)).
+Nous vous donnons rendez-vous le mercredi 29 juillet à partir de 18h30 au bar Chez Jean-Claude, 9 rue Vandamme, Paris 75014 (site internet : [https://www.chezjeanclaudeleretour.fr/](https://www.chezjeanclaudeleretour.fr/)).
 
 Y'aura à boire, à manger et sûrement des autocollants wallabag 🦘
 
