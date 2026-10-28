@@ -12,7 +12,7 @@
     "author": "",
     "license": "ISC",
     "engines": {
-        "node": ">=20"
+        "node": ">=24"
     },
     "devDependencies": {
         "@11ty/eleventy": "^3.1.7",
