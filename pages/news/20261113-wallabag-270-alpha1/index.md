@@ -9,7 +9,7 @@ In 2023, [I wrote](/news/20230824-about-wallabag-270/) that I would like to publ
 
 Today, we publish **wallabag 2.7.0-alpha.1**, the first test release of 2.7.0.
 
-⚠️ This is an **alpha** release: **do not use it in production**, and back up your database before upgrading. The latest stable release is still [wallabag 2.6.16](/news/20261113-new-release-wallabag-2616/).
+⚠️ This is an **alpha** release: **do not use it in production**, and back up your database before upgrading. The latest stable release is still [wallabag 2.6.17](/news/20261113-new-release-wallabag-2617/).
 
 _🤝  A little reminder that **you can support our work** on wallabag by sponsoring us on [Liberapay](https://liberapay.com/wallabag) or subscribe on [wallabag.it](https://www.wallabag.it/en). Thanks!_
 
@@ -30,7 +30,7 @@ If you package wallabag or offer it on your platform (YunoHost, Cloudron, Synolo
 * **Configuration with environment variables.** `app/config/parameters.yml` is still read, but deprecated. Set `APP_ENV=prod`, and `APP_SECRET` if you don't use `parameters.yml`.
 * **`web/wallassets/` is now `web/build/`**: update your web server rules if they point to it.
 * Pages and API endpoints you are not allowed to access now return a **404 error instead of a 403 error**. App developers, please check your error handling.
-* A Docker image `wallabag/wallabag:2.7.0-alpha.1` is available. The `latest` tag stays on 2.6.16.
+* A Docker image `wallabag/wallabag:2.7.0-alpha.1` is available. The `latest` tag stays on 2.6.17.
 
 Something breaks, or our documentation is unclear? Please [open an issue](https://github.com/wallabag/wallabag/issues/new/choose) and mention 2.7.0-alpha.1. We're happy to help.
 
