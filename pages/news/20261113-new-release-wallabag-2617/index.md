@@ -5,6 +5,8 @@ date: 2026-11-13 22:00:00 +01:00
 description: Fix release of wallabag, so that make update installs the latest stable release again
 ---
 
+⚠️ [wallabag 2.6.16](/news/20261113-new-release-wallabag-2616/) was a **security** release, and 2.6.17 includes its fixes. If you are still running 2.6.15 or older, please update your instance as soon as possible.
+
 📈  **To update your instance**, [just run `make update`](https://doc.wallabag.org/admin/upgrade/).
 Don't forget to make a backup of your instance (database and files).
 
