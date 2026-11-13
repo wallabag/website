@@ -12,7 +12,7 @@ _🤝  A little reminder that **you can support our work** on wallabag by sponso
 
 ## Human summary
 
-Earlier today, we published [wallabag 2.7.0-alpha.1](/news/20261113-wallabag-270-alpha1/). On instances running wallabag 2.6.15 or older, `make update` picked this alpha instead of the latest stable release. The upgrade then failed, and the instance stopped working.
+Earlier today, we published [wallabag 2.7.0-alpha.1](https://github.com/wallabag/wallabag/releases/tag/2.7.0-alpha.1). On instances running wallabag 2.6.15 or older, `make update` picked this alpha instead of the latest stable release. The upgrade then failed, and the instance stopped working.
 
 wallabag 2.6.17 fixes it: `make update` installs 2.6.17 again. Sorry for the trouble!
 
