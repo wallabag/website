@@ -4,9 +4,9 @@
   "url": "https://wallabag.org",
   "rss": "/feed.xml",
   "release": {
-    "version": "2.6.15",
-    "blogPost": "/news/20261028-new-release-wallabag-2615/",
-    "checksum": "3d71bada996ea2cc855047a77c256427"
+    "version": "2.6.16",
+    "blogPost": "/news/20261113-new-release-wallabag-2616/",
+    "checksum": "a976689549c18fc5ead7111e002e2e9f"
   },
   "metadata": {
     "email": "mailto:hello@wallabag.org",
