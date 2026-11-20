@@ -2,6 +2,7 @@
 title: 'wallabag 2.7.0-alpha.1'
 published: true
 date: 2026-11-18 16:30:00 +01:00
+release: 2.7.0-alpha.1
 description: First alpha release of wallabag 2.7.0, with PHP 8.2, configuration by environment variables and many new features
 ---
 
