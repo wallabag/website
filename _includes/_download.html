@@ -7,11 +7,13 @@
           <h1>Download wallabag and run your own read-it-later instance.</h1>
         </div>
         <div class="download-release-panel">
-          {% assign releaseVersion = github.appVersion | default: site.release.version %}
+          {% assign latest = releases.latest %}
+          {% assign blogPost = latest.release_url %}
+          {% for post in collections.post %}{% if post.data.release == latest.version %}{% assign blogPost = post.url %}{% endif %}{% endfor %}
           <div>
             <p class="download-release-label">Latest release</p>
-            <h2><a href="{{ site.release.blogPost }}">wallabag {{ releaseVersion }}</a></h2>
-            <p>md5 checksum: <code>{{ site.release.checksum }}</code></p>
+            <h2><a href="{{ blogPost }}">wallabag {{ latest.version }}</a></h2>
+            <p class="download-release-checksum">sha256 checksum: <code>{{ latest.sha256 }}</code></p>
             <p>Previous releases are available on <a href="{{ site.metadata.repo }}/releases" target="_blank">GitHub</a>.</p>
           </div>
           <a href="https://doc.wallabag.org/en/admin/installation/installation.html#installation" class="download-btn">Installation guide <i class="fa fa-arrow-right"></i></a>

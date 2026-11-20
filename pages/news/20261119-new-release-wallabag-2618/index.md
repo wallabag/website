@@ -2,6 +2,7 @@
 title: 'wallabag 2.6.18'
 published: true
 date: 2026-11-19 19:00:00 +01:00
+release: 2.6.18
 description: Security release of wallabag, with fixes for tagging rules import, public share page, EPUB export and SVG images
 ---
 
