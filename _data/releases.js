@@ -3,11 +3,15 @@
 // - list: the releases from 2.7.0, published in /releases.json. Instances >= 2.7.0 read this file
 //   to know if an update is available, see https://github.com/wallabag/wallabag/issues/9209
 
-const REPO = 'wallabag/wallabag';
+const API = 'https://api.github.com/repos/wallabag/wallabag';
+// raw.githubusercontent.com is not limited like the GitHub API.
+const RAW = 'https://raw.githubusercontent.com/wallabag/wallabag';
 
 // Any error fails the build: Netlify then keeps the current site instead of publishing wrong data.
+// GITHUB_TOKEN is optional: it raises the GitHub API limit of 60 requests per hour.
 const fetchJson = async (url) => {
-  const response = await fetch(url);
+  const token = url.startsWith(API) && process.env.GITHUB_TOKEN;
+  const response = await fetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : {} });
 
   if (!response.ok) {
     throw new Error(`Fetching ${url} failed: HTTP ${response.status}`);
@@ -16,43 +20,72 @@ const fetchJson = async (url) => {
   return response.json();
 };
 
-// "2.7.1" => [2, 7, 1, 1] and "", "2.7.1-beta.2" => [2, 7, 1, 0] and "beta.2":
-// a stable release comes after its pre-releases.
+// "2.7.1-beta.2" => { numbers: [2, 7, 1, 0], pre: "beta.2" }, "2.7.1" => { numbers: [2, 7, 1, 1], pre: "" }:
+// the last number puts a stable release after its pre-releases.
 const parseVersion = (tag) => {
-  const [, major, minor, patch, pre = ''] = /^(\d+)\.(\d+)\.(\d+)(?:-(.+))?$/.exec(tag) || [];
+  const [, major, minor, patch, pre = ''] = /^(\d+)\.(\d+)\.(\d+)(?:-(.+))?$/.exec(tag) ?? [];
 
   return major ? { numbers: [+major, +minor, +patch, pre ? 0 : 1], pre } : null;
 };
 
-const compareVersions = (a, b) =>
-  a.numbers.map((number, i) => number - b.numbers[i]).find((diff) => diff !== 0)
-  || a.pre.localeCompare(b.pre, 'en', { numeric: true });
+const compareVersions = (tagA, tagB) => {
+  const a = parseVersion(tagA);
+  const b = parseVersion(tagB);
+  const diff = a.numbers.map((number, i) => number - b.numbers[i]).find((n) => n !== 0);
 
-// True when the release notes have a heading with this exact title, e.g. "### Security fixes".
-const hasSection = (release, title) => new RegExp(`^#+\\s*${title}\\s*$`, 'im').test(release.body ?? '');
+  return diff ?? a.pre.localeCompare(b.pre, 'en', { numeric: true });
+};
+
+// "2.7.0-0" is lower than any 2.7.0 pre-release.
+const isFrom27 = (tag) => compareVersions(tag, '2.7.0-0') >= 0;
+
+// The package is uploaded by a workflow a few minutes after the release.
+const findPackage = (release) => release.assets
+  .find((asset) => asset.name === `wallabag-${release.tag_name}.tar.gz` && asset.digest?.startsWith('sha256:'));
+
+// Versions listed as patched by a published security advisory, e.g. "2.6.16, 2.7.0".
+const fetchSecurityVersions = async () => {
+  const advisories = await fetchJson(`${API}/security-advisories?state=published&per_page=100`);
+  const versions = advisories
+    .flatMap((advisory) => advisory.vulnerabilities)
+    .flatMap((vulnerability) => (vulnerability.patched_versions ?? '').split(','))
+    .map((version) => version.trim());
+
+  return new Set(versions.filter(Boolean));
+};
+
+const fetchPhpMin = async (tag) => {
+  const composer = await fetchJson(`${RAW}/${tag}/composer.json`);
+
+  return /\d+\.\d+/.exec(composer.require?.php ?? '')?.[0] ?? null;
+};
+
+const fetchMigrationFiles = async (tag) => {
+  const files = await fetchJson(`${API}/contents/migrations?ref=${tag}`);
+
+  return files.map((file) => file.name);
+};
 
 module.exports = async function () {
   console.log('Fetching wallabag releases');
 
-  const releases = (await fetchJson(`https://api.github.com/repos/${REPO}/releases?per_page=100`))
+  const [githubReleases, securityVersions] = await Promise.all([
+    fetchJson(`${API}/releases?per_page=100`),
+    fetchSecurityVersions(),
+  ]);
+
+  // Published releases with their package, the highest version first.
+  const releases = githubReleases
+    .filter((release) => !release.draft && parseVersion(release.tag_name) && findPackage(release))
+    .sort((a, b) => compareVersions(b.tag_name, a.tag_name))
     .map((release) => ({
-      release,
-      version: parseVersion(release.tag_name),
-      // The package is uploaded by a workflow a few minutes after the release: skip the release until then.
-      asset: release.assets.find((asset) => asset.name === `wallabag-${release.tag_name}.tar.gz`),
-    }))
-    .filter(({ release, version, asset }) => !release.draft && version && asset?.digest?.startsWith('sha256:'))
-    .sort((a, b) => compareVersions(b.version, a.version))
-    .map(({ release, version, asset }) => ({
       version: release.tag_name,
-      from27: version.numbers[0] > 2 || (version.numbers[0] === 2 && version.numbers[1] >= 7),
       date: release.published_at.slice(0, 10),
       prerelease: release.prerelease,
-      security: hasSection(release, 'Security fixes'),
-      make_update: !hasSection(release, 'Manual upgrade'),
+      security: securityVersions.has(release.tag_name),
       release_url: release.html_url,
-      tarball_url: asset.browser_download_url,
-      sha256: asset.digest.slice('sha256:'.length),
+      tarball_url: findPackage(release).browser_download_url,
+      sha256: findPackage(release).digest.replace('sha256:', ''),
     }));
 
   const latest = releases.find((release) => !release.prerelease);
@@ -61,12 +94,24 @@ module.exports = async function () {
     throw new Error('No stable wallabag release found');
   }
 
-  // raw.githubusercontent.com is not limited like the GitHub API.
-  const list = await Promise.all(releases.filter((release) => release.from27).map(async ({ from27, ...release }) => {
-    const composer = await fetchJson(`https://raw.githubusercontent.com/${REPO}/${release.version}/composer.json`);
+  // From the oldest release: a release has migrations when it adds migration files since the previous
+  // stable release. An update between two stable releases runs migrations if a release in between has some.
+  const list = [];
+  let previousStableFiles = [];
 
-    return { ...release, php_min: /\d+\.\d+/.exec(composer.require?.php ?? '')?.[0] ?? null };
-  }));
+  for (const release of releases.filter((item) => isFrom27(item.version)).reverse()) {
+    const migrationFiles = await fetchMigrationFiles(release.version);
+
+    list.unshift({
+      ...release,
+      php_min: await fetchPhpMin(release.version),
+      migrations: migrationFiles.some((file) => !previousStableFiles.includes(file)),
+    });
+
+    if (!release.prerelease) {
+      previousStableFiles = migrationFiles;
+    }
+  }
 
   return { latest, list };
 };
