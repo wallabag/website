@@ -8264,6 +8264,12 @@ blockquote .logo-quote {
 	font-size: 14px
 }
 
+.download-release-checksum code {
+	font-size: 13px;
+	white-space: normal;
+	overflow-wrap: anywhere
+}
+
 .download-release-panel a {
 	color: #3f6184;
 	font-weight: 800
