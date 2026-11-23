@@ -86,6 +86,7 @@ module.exports = async function () {
       release_url: release.html_url,
       tarball_url: findPackage(release).browser_download_url,
       sha256: findPackage(release).digest.replace('sha256:', ''),
+      signature_url: release.assets.find((asset) => asset.name === `${findPackage(release).name}.minisig`)?.browser_download_url ?? null,
     }));
 
   const latest = releases.find((release) => !release.prerelease);
