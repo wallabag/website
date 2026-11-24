@@ -38,6 +38,8 @@ php wallabin.phar install --release=2.7.0-alpha.2 wallabag-test
 
 wallabin asks you three questions (the URL of your instance, your database, the password of the admin user) and takes care of the rest.
 
+⚠️ wallabag 2.7 needs **PHP 8.2, 8.3 or 8.4**. PHP 8.5 is not supported yet: if it's your default version, run wallabin with another one, for example `php8.4 wallabin.phar install`.
+
 With the final 2.7.0 release, an update will be one command, `update`. wallabin will check that your server has what it needs, keep a copy of the previous version so you can go back, and refuse any package whose signature is wrong.
 
 Everything is explained in [the wallabin README](https://github.com/wallabag/wallabin).
